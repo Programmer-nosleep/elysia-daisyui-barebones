@@ -6,7 +6,15 @@
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/cors": "^1.4.0",
+    "@elysiajs/html": "^1.4.0",
+    "@elysiajs/static": "^1.4.0",
+    "@kitajs/html": "^4.2.10",
+    "@tailwindcss/cli": "^4.1.13",
+    "daisyui": "^5.1.24",
+    "elysia": "latest",
+    "logestic": "^1.2.4",
+    "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
     "bun-types": "latest"
