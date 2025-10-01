@@ -18,6 +18,7 @@
 # misc
 .DS_Store
 *.pem
+public/index.css
 
 # debug
 npm-debug.log*
@@ -40,3 +41,4 @@ yarn-error.log*
 **/*.log
 package-lock.json
 **/*.bun
+
