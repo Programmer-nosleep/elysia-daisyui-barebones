@@ -22,7 +22,7 @@ const buildCSS = () =>
 await buildCSS();
 
 if (Bun.env.NODE_ENV != "production") {
-  const watcher = watch("./public", { recursive: true }, async () => {
+  const watcher = watch("./src/globals.css", {}, async () => {
     await buildCSS();
   });
 
