@@ -148,6 +148,26 @@ nav div h1 {
   .edge-left { left: 0; }
   .edge-right { right: 0; transform: scaleX(-1); }
 
+  /* CMatrix background - subtle and blurred */
+  .cmatrix-bg { 
+    position: fixed; inset: 0; z-index: -10; pointer-events: none; 
+    opacity: .16; filter: blur(1.2px) saturate(105%);
+  }
+  .cmatrix-bg canvas { width: 100%; height: 100%; display: block; }
+  @media (prefers-reduced-motion: reduce) {
+    .cmatrix-bg { display: none; }
+  }
+
+  /* Masonry utilities */
+  .masonry { column-gap: 20px; }
+  .masonry-card { 
+    break-inside: avoid; margin-bottom: 20px; overflow: hidden;
+    border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); background: transparent;
+  }
+  .masonry-media { display:block; background: rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .masonry-body { position: relative; padding: 16px; }
+  .masonry-body::before { content:""; position:absolute; left:0; right:0; top:-24px; height:24px; background: linear-gradient(180deg, rgba(2,6,23,0), rgba(2,6,23,0.65)); pointer-events:none; }
+
   @media (min-width: 1024px) {
     .edge-align-left  { left: calc((100vw - 75vw) / 2 - 104px); }
     .edge-align-right { right: calc((100vw - 75vw) / 2 - 104px); transform: scaleX(-1); }

@@ -29,7 +29,7 @@ type TerminalProps = {
 };
 
 export default function Terminal({
-  title = "ahmadzanisy — zsh — 80×24",
+  title = "terminal — zsh — 80×24",
   colsClass = "cols-100",
   rowsClass = "rows-24",
   loginAt = Date.now().toString(),

@@ -16,7 +16,7 @@ export default async ( context: Context ) => {
           </div>
           <div class="hidden md:flex items-center gap-2 text-sm">
             <a href="/" class="btn btn-sm rounded-xl bg-transparent text-white border-white/20 hover:bg-white/10 shadow-lg">Home</a>
-            <a href="#projects" class="btn btn-sm rounded-xl bg-transparent text-white border-white/20 hover:bg-white/10 shadow-lg">Projects</a>
+            <a href="/projects" class="btn btn-sm rounded-xl bg-transparent text-white border-white/20 hover:bg-white/10 shadow-lg">Projects</a>
             <a href="/contact" class="btn btn-sm rounded-xl bg-transparent text-white border-white/20 hover:bg-white/10 shadow-lg">Contact</a>
           </div>
           <div class="flex items-center gap-3">
@@ -26,7 +26,7 @@ export default async ( context: Context ) => {
       </Navbar>
 
       <main class="mx-auto w-11/12 sm:w-5/6 lg:w-[75vw] max-w-none px-6 pb-16 pt-24 md:pt-28">
-        <section class="relative grid items-center gap-8 md:gap-10 lg:grid-cols-2 min-h-[calc(100vh-6rem)]">
+        <section class="relative grid items-center gap-8 md:gap-10 xl:grid-cols-2 min-h-[calc(100vh-6rem)]">
 
           <div class="space-y-6 relative z-10">
             <h1 class="text-3xl md:text-5xl font-semibold leading-tight reveal">

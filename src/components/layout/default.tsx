@@ -10,8 +10,22 @@ export default ({ children }: PropsWithChildren) => {
         <title>Portfolio</title>
         <meta name="description" content="Ban" />
         <link rel="stylesheet" href="/index.css" />
+        <script>{`
+          (function(){
+            try {
+              var ls = localStorage.getItem('theme');
+              var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+              if (ls === 'dark' || (!ls && prefersDark)) document.documentElement.classList.add('dark');
+              else document.documentElement.classList.remove('dark');
+            } catch(e) {}
+          })();
+        `}</script>
       </head>
-      <body class="">{children}</body>
+      <body class="bg-white text-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 antialiased min-h-screen">
+        <div class="edge-stripes edge-left edge-align-left"></div>
+        {children}
+        <div class="edge-stripes edge-right edge-align-right"></div>
+      </body>
     </html>
   );
 };
