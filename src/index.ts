@@ -8,6 +8,10 @@ import html from "@elysiajs/html";
 import routeHandler from "./routes/handler";
 import cors from "@elysiajs/cors";
 
+/**
+ * 
+ * 
+*/
 const buildCSS = () =>
   new Promise((resolve) =>
     exec(
@@ -32,6 +36,11 @@ if (Bun.env.NODE_ENV != "production") {
   });
 }
 
+
+/**
+ * 
+ * 
+*/
 const app = new Elysia()
   .use(Logestic.preset("common"))
   .use(cors())
