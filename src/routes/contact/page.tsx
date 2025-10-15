@@ -6,6 +6,7 @@ import Navbar from "../../components/navbar";
 export default async ( context: Context ) => {
   return (
     <DefaultLayout>
+      <div class="app-loader"></div>
       <Navbar>
         <div class="flex items-center justify-between gap-4">
           <div class="flex items-center gap-3">
@@ -24,7 +25,7 @@ export default async ( context: Context ) => {
       </Navbar>
 
       <main class="mx-auto w-11/12 sm:w-5/6 lg:w-[75vw] max-w-none px-6 pb-16 pt-24 md:pt-28">
-        <section class="grid gap-8 md:gap-10 xl:grid-cols-2">
+        <section class="relative grid items-center gap-8 md:gap-10 xl:grid-cols-2 min-h-[calc(100vh-6rem)]">
           <div class="space-y-4">
             <h1 class="text-3xl md:text-5xl font-semibold leading-tight">Contact Us</h1>
             <p class="text-neutral-600 dark:text-neutral-300 max-w-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Email, call, or complete the form — we’ll get back to you.</p>
@@ -44,8 +45,8 @@ export default async ( context: Context ) => {
             </div>
           </div>
 
-          <div class="">
-            <div class="rounded-3xl ring-1 ring-black/10 dark:ring-white/10 bg-white/70 dark:bg-neutral-900/70 shadow-2xl p-6 md:p-7 backdrop-blur">
+          <div class="flex justify-center">
+            <div class="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-3xl ring-1 ring-black/10 dark:ring-white/10 bg-white/70 dark:bg-neutral-900/70 shadow-2xl p-6 md:p-7 backdrop-blur">
               <h2 class="text-xl font-semibold mb-4">Get in Touch</h2>
               <form class="space-y-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

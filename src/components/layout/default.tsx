@@ -23,6 +23,8 @@ export default ({ children }: PropsWithChildren) => {
       </head>
       <body class="bg-white text-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 antialiased min-h-screen">
         <div class="edge-stripes edge-left edge-align-left"></div>
+        {/* layout frame borders (left, right, bottom) */}
+        <div class="pointer-events-none fixed left-1/2 -translate-x-1/2 top-0 bottom-0 w-11/12 sm:w-5/6 lg:w-[75vw] max-w-none border-l border-r border-b border-gray-100 dark:border-white/10 rounded-b-1"></div>
         {children}
         <div class="edge-stripes edge-right edge-align-right"></div>
       </body>

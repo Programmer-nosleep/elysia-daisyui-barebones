@@ -6,6 +6,7 @@ import { Context } from "elysia";
 export default async ( context: Context ) => {
   return (
     <DefaultLayout>
+      <div class="app-loader"></div>
       <Navbar>
         <div class="flex items-center justify-between gap-4">
           <div class="flex items-center gap-3">
@@ -83,6 +84,15 @@ export default async ( context: Context ) => {
           </div>
         </section>
       </main>
+      <script>
+        {`
+          document.addEventListener('DOMContentLoaded', function () {
+            requestAnimationFrame(function(){
+              document.body.classList.add('is-ready');
+            });
+          });
+        `}
+      </script>
     </DefaultLayout>
   );
 };
