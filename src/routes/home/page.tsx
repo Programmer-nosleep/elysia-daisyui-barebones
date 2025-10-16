@@ -1,6 +1,7 @@
 import { Html } from "@elysiajs/html";
 import DefaultLayout from "../../components/layout/default";
 import { Context } from "elysia";
+
 import Navbar from "../../components/navbar";
 import Terminal from "../../components/terminal";
 

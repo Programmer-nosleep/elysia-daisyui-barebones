@@ -1,7 +1,8 @@
 import { Html } from "@elysiajs/html";
 import DefaultLayout from "../../components/layout/default";
-import Navbar from "../../components/navbar";
 import { Context } from "elysia";
+
+import Navbar from "../../components/navbar";
 
 export default async ( context: Context ) => {
   return (
@@ -24,7 +25,7 @@ export default async ( context: Context ) => {
         </div>
       </Navbar>
 
-      <main class="mx-auto w-11/12 sm:w-5/6 lg:w-[75vw] max-w-none px-6 pb-16 pt-24 md:pt-28">
+      <main class="mx-auto w-11/12 sm:w-5/6 lg:w-[76vw] max-w-none px-6 pb-16 pt-24 md:pt-28">
         <section class="mt-16">
           <header class="mb-6">
             <h2 class="text-2xl md:text-3xl font-semibold">Portfolio Website</h2>

@@ -41,7 +41,6 @@ export default function Terminal({
   const preFadeOutDelay = clearAt > 0 ? `--d:${clearAt}s` : undefined;
   const postFadeInDelay = clearAt > 0 ? `--d:${clearAt + 0.2}s` : undefined;
 
-  // compute total animation duration for auto-scroll window
   function calcTotalSec() {
     let maxSec = 0;
     const scan = (steps: Array<{ cmdDelaySec?: number; cmdDurationSec?: number; holdSec?: number; out?: Array<{ delaySec: number; durationSec?: number }>;}>) => {
@@ -58,11 +57,10 @@ export default function Terminal({
     };
     scan(pre);
     scan(post);
-    // also account for clear switch if any
     maxSec = Math.max(maxSec, clearAt > 0 ? clearAt + 0.5 : 0);
     return maxSec;
   }
-  const totalMs = Math.ceil(calcTotalSec() * 1000) + 800; // small buffer
+  const totalMs = Math.ceil(calcTotalSec() * 1000) + 800;
 
   return (
     <div class="terminal">
